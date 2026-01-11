@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_handle_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:16:55 by dabdulla          #+#    #+#             */
-/*   Updated: 2025/10/21 20:40:23 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:20:33 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_strlen(char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 int	ft_putstr(char *s)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:09:55 by dabdulla          #+#    #+#             */
-/*   Updated: 2025/12/09 12:56:20 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:47:46 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*join_free(char *s1, char *s2)
 {
 	char	*tmp;
 
-	tmp = ft_strjoin(s1, s2);
+	tmp = ft_strjoin_gnl(s1, s2);
 	if (!tmp)
 		return (NULL);
 	return (tmp);
@@ -97,11 +97,11 @@ char	*get_next_line(int fd)
 	tmp = ft_substr(file, 0, find_new_line(file));
 	if (!tmp)
 		return (free_and_null(&file));
-	str = ft_substr(file, find_new_line(tmp), ft_strlen(file) - ft_strlen(tmp));
+	str = ft_substr(file, find_new_line(tmp), ft_strlen_int(file) - ft_strlen_int(tmp));
 	free_and_null(&file);
 	if (!str)
 		return (free_and_null(&tmp));
-	file = ft_strdup(str);
+	file = ft_strdup_gnl(str);
 	free_and_null(&str);
 	if (!file)
 		return (free_and_null(&file), free_and_null(&tmp));

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:09:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2025/11/04 13:23:11 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:47:56 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(const char *s)
+int	ft_strlen_int(const char *s)
 {
 	int	i;
 
@@ -22,13 +22,13 @@ int	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup_gnl(char *src)
 {
 	int		i;
 	char	*dupsrc;
 
 	i = 0;
-	dupsrc = malloc(ft_strlen(src) + 1);
+	dupsrc = malloc(ft_strlen_int(src) + 1);
 	if (!dupsrc)
 		return (NULL);
 	while (src[i])
@@ -40,14 +40,14 @@ char	*ft_strdup(char *src)
 	return (dupsrc);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	int		i;
 	int		j;
 	char	*new_arr;
 
 	i = 0;
-	new_arr = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
+	new_arr = malloc((ft_strlen_int(s1) + ft_strlen_int(s2)) + 1);
 	if (!new_arr)
 		return (s1);
 	while (s1[i])
@@ -76,9 +76,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	slen = ft_strlen(s);
+	slen = ft_strlen_int(s);
 	if (start >= slen)
-		return (ft_strdup(""));
+		return (ft_strdup_gnl(""));
 	if (len > slen - start)
 		len = slen - start;
 	str = malloc(len + 1);
