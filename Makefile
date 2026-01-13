@@ -2,7 +2,8 @@ NAME = so_long
 
 SOURCE = so_long.c \
 			get_next_line.c \
-			get_next_line_utils.c
+			get_next_line_utils.c \
+			map_helpers.c
 
 HEADER = so_long.HEADER
 
@@ -41,8 +42,8 @@ clean:
 	${RM} ${OBJECTS}
 
 fclean: clean
-	make -C ${LIBFT_DIR} clean
-	make -C ${FT_PRINTF_DIR} clean
+	make -C ${LIBFT_DIR} fclean
+	make -C ${FT_PRINTF_DIR} fclean
 	${RM} ${NAME}
 
 re: fclean all

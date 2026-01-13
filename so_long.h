@@ -6,12 +6,17 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/08 12:36:39 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/13 13:50:14 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf/ft_printf.h"
-#include "libft/libft.h"
-#include "get_next_line.h"
+#ifndef SO_LONG_H
+# define SO_LONG_H
+# include "ft_printf/ft_printf.h"
+# include "get_next_line.h"
+# include "libft/libft.h"
 
-int read_map(int fd);
+int	valid_map(int fd);
+int	valid_chars(char *map_line);
+
+#endif

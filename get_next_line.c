@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:09:55 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/06 14:47:46 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/13 13:47:58 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,8 @@ char	*get_next_line(int fd)
 	tmp = ft_substr(file, 0, find_new_line(file));
 	if (!tmp)
 		return (free_and_null(&file));
-	str = ft_substr(file, find_new_line(tmp), ft_strlen_int(file) - ft_strlen_int(tmp));
+	str = ft_substr(file, find_new_line(tmp), ft_strlen_int(file)
+			- ft_strlen_int(tmp));
 	free_and_null(&file);
 	if (!str)
 		return (free_and_null(&tmp));
