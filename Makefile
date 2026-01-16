@@ -3,7 +3,8 @@ NAME = so_long
 SOURCE = so_long.c \
 			get_next_line.c \
 			get_next_line_utils.c \
-			map_helpers.c
+			map_parser.c \
+			map_validator.c
 
 HEADER = so_long.HEADER
 
