@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/16 19:50:35 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:24:40 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char const *argv[])
 		ft_printf("NICE\n");
 	else
 		ft_printf("NOT NICE\n");
+	free_all(map);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/16 17:34:11 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:24:01 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*read_map(int fd)
 	{
 		new_node = malloc(sizeof(t_list));
 		if (!new_node)
-			return (free_all(head, line), NULL);
+			return (free_all(head), free(line), NULL);
 		new_node->content = ft_strtrim(line, "\n");
 		new_node->next = NULL;
 		if (head == NULL)
@@ -40,11 +40,10 @@ t_list	*read_map(int fd)
 	return (head);
 }
 
-int	free_all(t_list *head, char *line)
+int	free_all(t_list *head)
 {
 	t_list	*tmp;
 
-	free(line);
 	while (head != NULL)
 	{
 		tmp = head->next;

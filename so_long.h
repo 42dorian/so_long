@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/16 19:44:06 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:24:39 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 
 t_list				*read_map(int fd);
 int					valid_chars(t_list *head);
-int					free_all(t_list *head, char *line);
+int					free_all(t_list *head);
 int					valid_rectangle(t_list *head);
 int					validate_map(t_list *head);
 char				**store_map(t_list *head);

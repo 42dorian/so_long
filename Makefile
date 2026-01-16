@@ -6,7 +6,7 @@ SOURCE = so_long.c \
 			map_parser.c \
 			map_validator.c
 
-HEADER = so_long.HEADER
+HEADER = so_long.h
 
 CFLAGS = -Wall -Wextra -Werror -g
 
