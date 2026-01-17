@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/16 21:24:01 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:40:20 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,6 @@ t_list	*read_map(int fd)
 		line = get_next_line(fd);
 	}
 	return (head);
-}
-
-int	free_all(t_list *head)
-{
-	t_list	*tmp;
-
-	while (head != NULL)
-	{
-		tmp = head->next;
-		free(head->content);
-		free(head);
-		head = tmp;
-	}
-	return (0);
 }
 
 char	**store_map(t_list *head)
@@ -91,4 +77,23 @@ int	count_nodes(t_list *head)
 		head = head->next;
 	}
 	return (count);
+}
+
+void	playable_map(char **map, int x, int y, t_find *coins_exit, int total_c)
+{
+	if (map[x][y] == 'V' || map[x][y] == '1')
+		return ;
+	if (map[x][y] == 'C')
+		coins_exit->coins_found++;
+	else if (map[x][y] == 'E')
+	{
+		coins_exit->exit_found = 1;
+		return ;
+	}
+	map[x][y] = 'V';
+	playable_map(map, x + 1, y, coins_exit, total_c);
+	playable_map(map, x - 1, y, coins_exit, total_c);
+	playable_map(map, x, y + 1, coins_exit, total_c);
+	playable_map(map, x, y - 1, coins_exit, total_c);
+	return (coins_exit->exit_found == 1 && coins_exit->coins_found == total_c);
 }

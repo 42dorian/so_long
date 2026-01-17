@@ -4,7 +4,9 @@ SOURCE = so_long.c \
 			get_next_line.c \
 			get_next_line_utils.c \
 			map_parser.c \
-			map_validator.c
+			map_validator.c \
+			map_helpers.c \
+			general_helpers.c
 
 HEADER = so_long.h
 
