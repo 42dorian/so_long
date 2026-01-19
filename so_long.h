@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/17 15:40:04 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:13:09 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_list
 
 t_list				*read_map(int fd);
 int					valid_chars(t_list *head);
-int					free_all(t_list *head);
+void					free_all(t_list *head);
 int					valid_rectangle(t_list *head);
 int					validate_map(t_list *head);
 char				**store_map(t_list *head);
@@ -38,10 +38,13 @@ int					count_nodes(t_list *head);
 int					valid_required_chars(t_list *head, int e, int p, int c);
 int					valid_walls(t_list *head);
 int					validate_map(t_list *head);
-void	free_strs(char **strs, int i);
-void	playable_map(char **map, int x, int y, t_find *coins_exit, int total_c)
+void				free_strs(char **strs, int i);
+int					playable_map(char **map);
+void				map_info(char **map, int *px, int *py, int *coins);
+void				fill_map(char **map, int y, int x, t_find *coins_exit);
 
 // testing
 void				printf_map(t_list *head);
+void print_map_arr(char **map);
 
 #endif

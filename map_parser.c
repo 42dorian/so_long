@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/17 15:40:20 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:25:25 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ char	**store_map(t_list *head)
 	int		height;
 	int		i;
 	char	**map;
-	t_list	*tmp;
 
 	i = 0;
 	height = count_nodes(head);
@@ -55,9 +54,7 @@ char	**store_map(t_list *head)
 	while (head)
 	{
 		map[i] = head->content;
-		tmp = head;
 		head = head->next;
-		free(tmp);
 		i++;
 	}
 	map[i] = NULL;
@@ -79,21 +76,42 @@ int	count_nodes(t_list *head)
 	return (count);
 }
 
-void	playable_map(char **map, int x, int y, t_find *coins_exit, int total_c)
+int	playable_map(char **map)
 {
-	if (map[x][y] == 'V' || map[x][y] == '1')
-		return ;
-	if (map[x][y] == 'C')
-		coins_exit->coins_found++;
-	else if (map[x][y] == 'E')
+	int x;
+	int y;
+	int coins;
+	t_find results;
+	
+	results.coins_found = 0;
+	results.exit_found = 0;
+	map_info(map, &x, &y, &coins);
+	fill_map(map, y, x, &results);
+	ft_printf("Exit: %i, Coins: %i\n", results.exit_found, results.coins_found);
+	if (results.exit_found == 1 && results.coins_found == coins)
+		ft_printf("Playable map!\n");
+	else
 	{
-		coins_exit->exit_found = 1;
+		ft_printf("Not playable\n");
+	}
+	
+	return(0);
+}
+
+void	fill_map(char **map, int y, int x, t_find *result)
+{
+	if (map[y][x] == 'V' || map[y][x] == '1')
+		return ;
+	if (map[y][x] == 'C')
+		result->coins_found++;
+	else if (map[y][x] == 'E')
+	{
+		result->exit_found = 1;
 		return ;
 	}
-	map[x][y] = 'V';
-	playable_map(map, x + 1, y, coins_exit, total_c);
-	playable_map(map, x - 1, y, coins_exit, total_c);
-	playable_map(map, x, y + 1, coins_exit, total_c);
-	playable_map(map, x, y - 1, coins_exit, total_c);
-	return (coins_exit->exit_found == 1 && coins_exit->coins_found == total_c);
+	map[y][x] = 'V';
+	fill_map(map, y + 1, x, result);
+	fill_map(map, y - 1, x, result);
+	fill_map(map, y, x + 1, result);
+	fill_map(map, y, x - 1, result);
 }
