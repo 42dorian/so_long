@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 14:11:15 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/19 15:01:24 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:46:27 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ void map_info(char **map, int *px, int *py, int *coins)
                 *py = y;
             }
             if (map[y][x] == 'C')
-            {
                 *coins += 1;
-                ft_printf("Found a coin at [%d][%d]. Total so far: %d\n", y, x, coins);
-            }
             x++;
         }
         x = 0;

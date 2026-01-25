@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/19 15:25:25 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/25 19:10:30 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**store_map(t_list *head)
 		return (NULL);
 	while (head)
 	{
-		map[i] = head->content;
+		map[i] = ft_strdup(head->content);
 		head = head->next;
 		i++;
 	}
@@ -75,8 +75,8 @@ int	count_nodes(t_list *head)
 	}
 	return (count);
 }
-
-int	playable_map(char **map)
+#include <stdio.h>
+int	playable_map(char **map, t_game *game)
 {
 	int x;
 	int y;
@@ -86,16 +86,10 @@ int	playable_map(char **map)
 	results.coins_found = 0;
 	results.exit_found = 0;
 	map_info(map, &x, &y, &coins);
+	game->player_y = y;
+	game->player_x = x;
 	fill_map(map, y, x, &results);
-	ft_printf("Exit: %i, Coins: %i\n", results.exit_found, results.coins_found);
-	if (results.exit_found == 1 && results.coins_found == coins)
-		ft_printf("Playable map!\n");
-	else
-	{
-		ft_printf("Not playable\n");
-	}
-	
-	return(0);
+	return(results.exit_found == 1 && results.coins_found == coins);
 }
 
 void	fill_map(char **map, int y, int x, t_find *result)

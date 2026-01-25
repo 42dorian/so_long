@@ -6,7 +6,9 @@ SOURCE = so_long.c \
 			map_parser.c \
 			map_validator.c \
 			map_helpers.c \
-			general_helpers.c
+			general_helpers.c \
+			game_init.c \
+			game_input.c
 
 HEADER = so_long.h
 
