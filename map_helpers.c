@@ -6,34 +6,34 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 14:11:15 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/22 16:46:27 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:28:02 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void map_info(char **map, int *px, int *py, int *coins)
+void	map_info(char **map, int *px, int *py, int *coins)
 {
-    int x;
-    int y;
+	int	x;
+	int	y;
 
-    x = 0;
-    y = 0;
-    *coins = 0;
-    while (map[y])
-    {
-        while (map[y][x])
-        {
-            if (map[y][x] == 'P')
-            {
-                *px = x;
-                *py = y;
-            }
-            if (map[y][x] == 'C')
-                *coins += 1;
-            x++;
-        }
-        x = 0;
-        y++;
-    }
+	x = 0;
+	y = 0;
+	*coins = 0;
+	while (map[y])
+	{
+		while (map[y][x])
+		{
+			if (map[y][x] == 'P')
+			{
+				*px = x;
+				*py = y;
+			}
+			if (map[y][x] == 'C')
+				*coins += 1;
+			x++;
+		}
+		x = 0;
+		y++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/25 19:10:30 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:20:47 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,21 @@ int	count_nodes(t_list *head)
 	}
 	return (count);
 }
-#include <stdio.h>
+
 int	playable_map(char **map, t_game *game)
 {
-	int x;
-	int y;
-	int coins;
-	t_find results;
-	
+	int		x;
+	int		y;
+	int		coins;
+	t_find	results;
+
 	results.coins_found = 0;
 	results.exit_found = 0;
 	map_info(map, &x, &y, &coins);
 	game->player_y = y;
 	game->player_x = x;
 	fill_map(map, y, x, &results);
-	return(results.exit_found == 1 && results.coins_found == coins);
+	return (results.exit_found == 1 && results.coins_found == coins);
 }
 
 void	fill_map(char **map, int y, int x, t_find *result)

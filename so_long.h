@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/25 19:17:23 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:08:51 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int					update_animation(t_game *game);
 int					img_to_win(t_game *game, void *img_ptr, int x, int y);
 int					handle_input(int keysym, t_game *game);
 void				move_player(t_game *game, int x, int y);
+int					check_input(int fd, int argc, char const *argv);
 // testing
 void				printf_map(t_list *head);
 void				print_map_arr(char **map);

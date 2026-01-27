@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 12:59:52 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:26:50 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	init_win(t_game *game)
 	load_images(game);
 	mlx_loop_hook(game->mlx, update_animation, game);
 	mlx_key_hook(game->win, handle_input, game);
-	mlx_hook(game->win, 2, 1L << 0, handle_input, game);
 	mlx_loop(game->mlx);
 	return (0);
 }
@@ -39,7 +38,7 @@ void	load_images(t_game *game)
 	game->player[1] = mlx_xpm_file_to_image(game->mlx, "xpms/p_l.xpm", &w, &h);
 	game->floor = mlx_xpm_file_to_image(game->mlx, "xpms/bg_1.xpm", &w, &h);
 	game->door = mlx_xpm_file_to_image(game->mlx, "xpms/door.xpm", &w, &h);
-		game->coin_frames[0] = mlx_xpm_file_to_image(game->mlx, "xpms/c0.xpm", &w,
+	game->coin_frames[0] = mlx_xpm_file_to_image(game->mlx, "xpms/c0.xpm", &w,
 			&h);
 	game->coin_frames[1] = mlx_xpm_file_to_image(game->mlx, "xpms/c1.xpm", &w,
 			&h);
