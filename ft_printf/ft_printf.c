@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:16:06 by dabdulla          #+#    #+#             */
-/*   Updated: 2025/10/21 20:41:14 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/26 10:17:22 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,27 @@ int	is_valid(const char c)
 	return (0);
 }
 
-int	handle_args(const char c, va_list args)
+int	handle_args(const char c, va_list *args)
 {
 	int	count;
 
 	count = 0;
 	if (c == 's')
-		count += ft_putstr(va_arg(args, char *));
+		count += ft_putstr(va_arg(*args, char *));
 	if (c == 'c')
-		count += ft_putchar(va_arg(args, int));
+		count += ft_putchar(va_arg(*args, int));
 	if (c == '%')
 		count += ft_putchar('%');
 	if (c == 'i' || c == 'd')
-		count += ft_putnbr((long)va_arg(args, int), 10);
+		count += ft_putnbr((long)va_arg(*args, int), 10);
 	if (c == 'x')
-		count += ft_putnbr(va_arg(args, unsigned int), 16);
+		count += ft_putnbr(va_arg(*args, unsigned int), 16);
 	if (c == 'X')
-		count += ft_putnbr_caps(va_arg(args, unsigned int), 16);
+		count += ft_putnbr_caps(va_arg(*args, unsigned int), 16);
 	if (c == 'p')
-		count += ft_print_ptr(va_arg(args, void *));
+		count += ft_print_ptr(va_arg(*args, void *));
 	if (c == 'u')
-		count += ft_printf_uint(va_arg(args, unsigned int), 10);
+		count += ft_printf_uint(va_arg(*args, unsigned int), 10);
 	return (count);
 }
 
@@ -68,7 +68,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%' && is_valid(format[i + 1]))
-			len += handle_args(format[++i], args);
+			len += handle_args(format[++i], &args);
 		else
 			len += ft_putchar(format[i]);
 		i++;

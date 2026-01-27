@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 23:14:40 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/06 14:20:40 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/26 10:18:01 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	ft_putnbr_caps(long n, int base);
 int	ft_print_ptr(void *pointer);
 int	ft_printf_uint(unsigned long n, int base);
 int	is_valid(const char c);
-int	handle_args(const char c, va_list args);
+int	handle_args(const char c, va_list *args);
 
 #endif

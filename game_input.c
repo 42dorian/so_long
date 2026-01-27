@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:37:47 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/25 19:17:11 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 12:58:59 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ int handle_input(int keysym, t_game *game)
     {
         game->p_dir = 0;
         move_player(game, 1, 0);
+    }
+    else if (keysym == 53 || keysym == 65307)
+    {
+        ft_printf("GAME OVER!\n");
     }
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/25 19:13:33 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/01/27 12:59:52 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	init_win(t_game *game)
 	load_images(game);
 	mlx_loop_hook(game->mlx, update_animation, game);
 	mlx_key_hook(game->win, handle_input, game);
+	mlx_hook(game->win, 2, 1L << 0, handle_input, game);
 	mlx_loop(game->mlx);
 	return (0);
 }
