@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 16:20:47 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/01 02:40:21 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,31 +81,31 @@ int	playable_map(char **map, t_game *game)
 	int		x;
 	int		y;
 	int		coins;
-	t_find	results;
 
-	results.coins_found = 0;
-	results.exit_found = 0;
+	game->coins_found = 0;
+	game->exit_found = 0;
 	map_info(map, &x, &y, &coins);
 	game->player_y = y;
 	game->player_x = x;
-	fill_map(map, y, x, &results);
-	return (results.exit_found == 1 && results.coins_found == coins);
+	fill_map(map, y, x, game);
+	free(map);
+	return (game->exit_found == 1 && game->coins_found == coins);
 }
 
-void	fill_map(char **map, int y, int x, t_find *result)
+void	fill_map(char **map, int y, int x, t_game *game)
 {
 	if (map[y][x] == 'V' || map[y][x] == '1')
 		return ;
 	if (map[y][x] == 'C')
-		result->coins_found++;
+		game->coins_found++;
 	else if (map[y][x] == 'E')
 	{
-		result->exit_found = 1;
+		game->exit_found = 1;
 		return ;
 	}
 	map[y][x] = 'V';
-	fill_map(map, y + 1, x, result);
-	fill_map(map, y - 1, x, result);
-	fill_map(map, y, x + 1, result);
-	fill_map(map, y, x - 1, result);
+	fill_map(map, y + 1, x, game);
+	fill_map(map, y - 1, x, game);
+	fill_map(map, y, x + 1, game);
+	fill_map(map, y, x - 1, game);
 }

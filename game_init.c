@@ -6,14 +6,18 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 15:26:50 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/01 02:16:00 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	init_win(t_game *game)
+int	init_win(t_game *game, t_list *map)
 {
+	game->collected_coins = 0;
+	game->map = store_map(map);
+	game->map_h = count_nodes(map);
+	game->map_w = ft_strlen(map->content);
 	game->mlx = mlx_init();
 	if (!game->mlx)
 		return (0);

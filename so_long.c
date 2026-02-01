@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 16:21:04 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/01 02:34:00 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char const *argv[])
 		return (0);
 	map = read_map(fd);
 	if (!map)
-		return(ft_printf("ERROR map\n", 0));
+		return(0);
 	if (validate_map(map))
 	{
 		tmp_map = store_map(map);
@@ -35,34 +35,8 @@ int	main(int argc, char const *argv[])
 		if (!playable_map(tmp_map, &game))
 			ft_printf("Error:\nNot a playable map\n");
 	}
-	free(tmp_map);
-	game.map = store_map(map);
-	game.map_h = count_nodes(map);
-	game.map_w = ft_strlen(map->content);
-	init_win(&game);
+	init_win(&game, map);
 	free_all(map);
 	free(game.map);
-	free(tmp_map);
 	return (0);
-}
-
-void	printf_map(t_list *head)
-{
-	while (head)
-	{
-		ft_printf("%s\n", head->content);
-		head = head->next;
-	}
-}
-
-void	print_map_arr(char **map)
-{
-	int	i;
-
-	i = 0;
-	while (map[i])
-	{
-		ft_printf("%s\n", map[i]);
-		i++;
-	}
 }

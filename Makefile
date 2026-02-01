@@ -12,7 +12,7 @@ SOURCE = so_long.c \
 
 HEADER = so_long.h
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
 MINIFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 

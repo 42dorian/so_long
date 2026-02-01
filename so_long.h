@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 16:08:51 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/01 02:33:51 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@
 # define S_KEY 1
 # define D_KEY 2
 # define ESC_KEY 53
-
-typedef struct s_find
-{
-	int				coins_found;
-	int				exit_found;
-}					t_find;
 
 typedef struct s_game
 {
@@ -49,8 +43,10 @@ typedef struct s_game
 	int				map_h;
 	int				player_x;
 	int				player_y;
-	int				collectible_count;
-	int				move_count;
+	int				coins_found;
+	int				exit_found;
+	int				collected_coins;
+	int				moves_count;
 }					t_game;
 
 typedef struct s_list
@@ -72,8 +68,8 @@ int					validate_map(t_list *head);
 void				free_strs(char **strs, int i);
 int					playable_map(char **map, t_game *game);
 void				map_info(char **map, int *px, int *py, int *coins);
-void				fill_map(char **map, int y, int x, t_find *coins_exit);
-int					init_win(t_game *game);
+void				fill_map(char **map, int y, int x, t_game *game);
+int					init_win(t_game *game, t_list *map);
 void				load_images(t_game *game);
 void				render_all(t_game *game);
 int					update_animation(t_game *game);
@@ -81,8 +77,5 @@ int					img_to_win(t_game *game, void *img_ptr, int x, int y);
 int					handle_input(int keysym, t_game *game);
 void				move_player(t_game *game, int x, int y);
 int					check_input(int fd, int argc, char const *argv);
-// testing
-void				printf_map(t_list *head);
-void				print_map_arr(char **map);
 
 #endif
