@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/01 02:16:00 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:39:49 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	init_win(t_game *game, t_list *map)
 	game->map = store_map(map);
 	game->map_h = count_nodes(map);
 	game->map_w = ft_strlen(map->content);
+	free_all(map);
 	game->mlx = mlx_init();
 	if (!game->mlx)
 		return (0);
@@ -56,6 +57,8 @@ void	load_images(t_game *game)
 			&h);
 	game->curr_frame = 0;
 	game->loop_counter = 0;
+	game->p_dir = 1;
+	game->moves_count = 0;
 }
 
 void	render_all(t_game *g)
@@ -89,7 +92,7 @@ void	render_all(t_game *g)
 int	update_animation(t_game *game)
 {
 	game->loop_counter++;
-	if (game->loop_counter > 1000)
+	if (game->loop_counter > 10000)
 	{
 		game->curr_frame++;
 		if (game->curr_frame >= 6)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   general_helpers.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:36:39 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/27 16:12:54 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:41:21 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,47 @@ int	check_input(int fd, int argc, char const *argv)
 	if (!ft_strnstr(argv, ".ber", ft_strlen(argv)))
 		return (0);
 	return (1);
+}
+void	kill_game(t_game *game)
+{
+	destroy_images(game);
+	if (game->win)
+	{
+		mlx_destroy_window(game->mlx, game->win);
+		game->win = NULL;
+	}
+	if (game->mlx)
+	{
+		mlx_destroy_display(game->mlx);
+		free(game->mlx);
+		game->mlx = NULL;
+	}
+	free_strs(game->map, game->map_h);
+}
+
+
+void destroy_images(t_game *game)
+{
+	mlx_destroy_image(game->mlx, game->door);
+	game->door = NULL;
+	mlx_destroy_image(game->mlx, game->wall);
+	game->wall = NULL;
+	mlx_destroy_image(game->mlx, game->floor);
+	game->floor = NULL;
+	mlx_destroy_image(game->mlx, game->player[0]);
+	game->player[0] = NULL;
+	mlx_destroy_image(game->mlx, game->player[1]);
+	game->player[1] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[0]);
+	game->coin_frames[0] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[1]);
+	game->coin_frames[1] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[2]);
+	game->coin_frames[2] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[3]);
+	game->coin_frames[3] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[4]);
+	game->coin_frames[4] = NULL;
+	mlx_destroy_image(game->mlx, game->coin_frames[5]);
+	game->coin_frames[5] = NULL;
 }

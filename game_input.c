@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_input.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:37:47 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/01 02:28:56 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:40:24 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	handle_input(int keysym, t_game *game)
 		return (0);
 	if (keysym == ESC_KEY)
 	{
-		mlx_destroy_window(game->mlx, game->win);
+		kill_game(game);
 		exit(0);
 	}
 	if (keysym == W_KEY)
@@ -49,12 +49,14 @@ void	move_player(t_game *game, int x, int y)
 		return ;
 	else if (game->map[next_y][next_x] == 'C')
 		game->collected_coins++;
-	else if (game->map[next_y][next_x] == 'E' && game->collected_coins == game->coins_found)
+	else if (game->map[next_y][next_x] == 'E'
+		&& game->collected_coins == game->coins_found)
 	{
-		mlx_destroy_window(game->mlx, game->win);
+		kill_game(game);
 		exit(0);
 	}
-	else if(game->map[next_y][next_x] == 'E' && game->collected_coins != game->coins_found)
+	else if (game->map[next_y][next_x] == 'E'
+		&& game->collected_coins != game->coins_found)
 		return ;
 	game->map[game->player_y][game->player_x] = '0';
 	game->map[next_y][next_x] = 'P';
@@ -62,5 +64,5 @@ void	move_player(t_game *game, int x, int y)
 	game->player_x = next_x;
 	render_all(game);
 	game->moves_count++;
-	ft_printf("Moves: %i\n",  game->moves_count);
+	ft_printf("Moves: %i\n", game->moves_count);
 }

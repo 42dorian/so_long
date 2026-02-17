@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/01 02:34:00 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:39:58 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char const *argv[])
 		return (0);
 	map = read_map(fd);
 	if (!map)
-		return(0);
+		return (0);
 	if (validate_map(map))
 	{
 		tmp_map = store_map(map);
@@ -36,7 +36,5 @@ int	main(int argc, char const *argv[])
 			ft_printf("Error:\nNot a playable map\n");
 	}
 	init_win(&game, map);
-	free_all(map);
-	free(game.map);
 	return (0);
 }

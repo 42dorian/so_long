@@ -12,9 +12,9 @@ SOURCE = so_long.c \
 
 HEADER = so_long.h
 
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g 
 
-MINIFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
+MINIFLAGS = -lXext -lX11 -lmlx -lm 
 
 OBJECTS = $(SOURCE:.c=.o)
 
@@ -24,7 +24,7 @@ FT_PRINTF_DIR = ft_printf
 LIBFT = ${LIBFT_DIR}/libft.a
 FT_PRINTF = ${FT_PRINTF_DIR}/libftprintf.a
 
-CC = CC
+CC = cc
 RM = rm -f
 
 all: ${NAME}

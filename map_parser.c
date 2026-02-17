@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_parser.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/01 02:40:21 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:45:13 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,16 +78,20 @@ int	count_nodes(t_list *head)
 
 int	playable_map(char **map, t_game *game)
 {
-	int		x;
-	int		y;
-	int		coins;
+	int	x;
+	int	y;
+	int	coins;
+	int	i;
 
+	i = 0;
 	game->coins_found = 0;
 	game->exit_found = 0;
 	map_info(map, &x, &y, &coins);
 	game->player_y = y;
 	game->player_x = x;
 	fill_map(map, y, x, game);
+	while (map[i])
+		free(map[i++]);
 	free(map);
 	return (game->exit_found == 1 && game->coins_found == coins);
 }

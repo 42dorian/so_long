@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/01 02:33:51 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/17 21:20:19 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 # include <mlx.h>
 # include <stdlib.h>
 
-# define W_KEY 13
-# define A_KEY 0
-# define S_KEY 1
-# define D_KEY 2
-# define ESC_KEY 53
+# define W_KEY 119
+# define A_KEY 97
+# define S_KEY 115
+# define D_KEY 100
+# define ESC_KEY 65307
 
 typedef struct s_game
 {
@@ -77,5 +77,7 @@ int					img_to_win(t_game *game, void *img_ptr, int x, int y);
 int					handle_input(int keysym, t_game *game);
 void				move_player(t_game *game, int x, int y);
 int					check_input(int fd, int argc, char const *argv);
+void				kill_game(t_game *game);
+void				destroy_images(t_game *game);
 
 #endif
