@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/17 21:20:19 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 12:23:20 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ void				move_player(t_game *game, int x, int y);
 int					check_input(int fd, int argc, char const *argv);
 void				kill_game(t_game *game);
 void				destroy_images(t_game *game);
+int					handle_x(t_game *game);
 
 #endif

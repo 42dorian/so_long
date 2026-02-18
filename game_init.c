@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 10:02:28 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 12:23:37 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	init_win(t_game *game, t_list *map)
 	load_images(game);
 	mlx_loop_hook(game->mlx, update_animation, game);
 	mlx_key_hook(game->win, handle_input, game);
+	mlx_hook(game->win, 17, 0L, handle_x, game);
 	mlx_loop(game->mlx);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:37:47 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/17 21:40:24 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 12:21:21 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@ int	handle_input(int keysym, t_game *game)
 		game->p_dir = 0;
 		move_player(game, 1, 0);
 	}
+	return (0);
+}
+
+int	handle_x(t_game *game)
+{
+	kill_game(game);
+	exit(0);
 	return (0);
 }
 
