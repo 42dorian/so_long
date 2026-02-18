@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 12:23:20 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 20:13:29 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,8 @@ int					check_input(int fd, int argc, char const *argv);
 void				kill_game(t_game *game);
 void				destroy_images(t_game *game);
 int					handle_x(t_game *game);
+// int					destroy_image(void *mlx_ptr, void **img_ptr);
+int					check_images(t_game *game);
+// void				*xpm_to_img(t_game *g, void *mlx, char *n, int *w, int *h);
 
 #endif

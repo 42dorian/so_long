@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 10:34:19 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:43:48 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char const *argv[])
 	t_game	game;
 	char	**tmp_map;
 
-	game.map = NULL;
+	ft_bzero(&game, sizeof(t_game));
 	tmp_map = NULL;
 	fd = open(argv[1], O_RDONLY);
 	if (!check_input(fd, argc, argv[1]))
@@ -31,11 +31,10 @@ int	main(int argc, char const *argv[])
 	{
 		tmp_map = store_map(map);
 		if (!tmp_map)
-			return (0);
+			return (free_all(map), 0);
 		if (!playable_map(tmp_map, &game))
 			ft_printf("Error:\nNot a playable map\n");
 		init_win(&game, map);
 	}
-	free_all(map);
 	return (0);
 }

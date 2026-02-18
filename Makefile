@@ -8,7 +8,8 @@ SOURCE = so_long.c \
 			map_helpers.c \
 			general_helpers.c \
 			game_init.c \
-			game_input.c
+			game_input.c \
+			game_init_helpers.c
 
 HEADER = so_long.h
 

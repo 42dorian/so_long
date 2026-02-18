@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/17 21:45:13 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 20:31:13 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*read_map(int fd)
 	t_list	*new_node;
 
 	head = NULL;
-	tail = NULL;
+	// tail = NULL;
 	line = get_next_line(fd);
 	while (line != NULL)
 	{
@@ -28,6 +28,8 @@ t_list	*read_map(int fd)
 		if (!new_node)
 			return (free_all(head), free(line), NULL);
 		new_node->content = ft_strtrim(line, "\n");
+		if (!new_node->content)
+			return (free_all(head), free(line), NULL);
 		new_node->next = NULL;
 		if (head == NULL)
 			head = new_node;
@@ -54,6 +56,11 @@ char	**store_map(t_list *head)
 	while (head)
 	{
 		map[i] = ft_strdup(head->content);
+		if (!map[i])
+		{
+			free_strs(map, --i);
+			return(0);
+		}
 		head = head->next;
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:36:39 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 12:18:04 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 20:12:37 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,26 +71,23 @@ void	kill_game(t_game *game)
 
 void	destroy_images(t_game *game)
 {
-	mlx_destroy_image(game->mlx, game->door);
-	game->door = NULL;
-	mlx_destroy_image(game->mlx, game->wall);
-	game->wall = NULL;
-	mlx_destroy_image(game->mlx, game->floor);
-	game->floor = NULL;
-	mlx_destroy_image(game->mlx, game->player[0]);
-	game->player[0] = NULL;
-	mlx_destroy_image(game->mlx, game->player[1]);
-	game->player[1] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[0]);
-	game->coin_frames[0] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[1]);
-	game->coin_frames[1] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[2]);
-	game->coin_frames[2] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[3]);
-	game->coin_frames[3] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[4]);
-	game->coin_frames[4] = NULL;
-	mlx_destroy_image(game->mlx, game->coin_frames[5]);
-	game->coin_frames[5] = NULL;
+	int	i;
+
+	if (game->mlx && game->door)
+		mlx_destroy_image(game->mlx, game->door);
+	if (game->mlx && game->floor)
+		mlx_destroy_image(game->mlx, game->floor);
+	if (game->mlx && game->player[0])
+		mlx_destroy_image(game->mlx, game->player[0]);
+	if (game->mlx && game->player[1])
+		mlx_destroy_image(game->mlx, game->player[1]);
+	if (game->mlx && game->wall)
+		mlx_destroy_image(game->mlx, game->wall);
+	i = 0;
+	while (i < 6)
+	{
+		if (game->mlx && game->coin_frames[i])
+			mlx_destroy_image(game->mlx, game->coin_frames[i++]);
+	}
+	
 }

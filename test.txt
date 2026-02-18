@@ -1,0 +1,1857 @@
+
+   [33m┌[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┐[0m
+   [33m│[0m                                 [33m│[0m
+   [33m│[0m   [33mfuncheck[0m -- [1m1.1.5[0m             [33m│[0m
+   [33m│[0m                                 [33m│[0m
+   [33m│[0m   - program: [1m./so_long[0m          [33m│[0m
+   [33m│[0m                                 [33m│[0m
+   [33m│[0m   - arguments:                  [33m│[0m
+   [33m│[0m       * [1mmaps/small.ber[0m          [33m│[0m
+   [33m└[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┘[0m
+
+[44m[1m INFO [0m If your program wait for stdin input, you can type here or pipe it.
+[33m───────────── TTY ────────────[0m
+[33m──────────────────────────────[0m
+[46m[1m TASK [0m Testable functions fetching [42m[1m ✓ [0m
+[44m[1m INFO [0m Functions detected count: [1m75[0m
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3328[0m bytes allocated in [33m16[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+
+┏[42m [1mcalloc [0m when this function is failing, allocations are not freed in [33m14[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m24576[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4992[0m bytes allocated in [33m24[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mcalloc [0m when this function is failing, allocations are not freed in [33m15[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m24576[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4784[0m bytes allocated in [33m23[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3328[0m bytes allocated in [33m16[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4992[0m bytes allocated in [33m24[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m5824[0m bytes allocated in [33m28[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m34[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:24:9 (0x401b02)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m25[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_substr at get_next_line_utils.c:84:8 (0x4019f0)
+  ┗━┳━━ get_next_line at get_next_line.c:100:8 (0x4016e1)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m9[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_substr at get_next_line_utils.c:84:8 (0x4019f0)
+  ┗━┳━━ get_next_line at get_next_line.c:100:8 (0x4016e1)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m18[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m32[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m1[0m contexts 
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m34[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:24:9 (0x401b02)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m1[0m contexts 
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m25[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_substr at get_next_line_utils.c:84:8 (0x4019f0)
+  ┗━┳━━ get_next_line at get_next_line.c:97:8 (0x401673)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m9[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_substr at get_next_line_utils.c:84:8 (0x4019f0)
+  ┗━┳━━ get_next_line at get_next_line.c:97:8 (0x401673)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m18[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m32[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strjoin_gnl at get_next_line_utils.c:50:12 (0x40188d)
+  ┗━┳━━ join_free at get_next_line.c:19:8 (0x40136c)
+    ┗━┳━━ read_loop at get_next_line.c:79:10 (0x40158c)
+      ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+        ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+          ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m43[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m80[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ ft_substr at get_next_line_utils.c:81:11 (0x4019b5)
+    ┗━┳━━ get_next_line at get_next_line.c:100:8 (0x4016e1)
+      ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+        ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m36[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m64[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m9[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strdup_gnl at get_next_line_utils.c:31:11 (0x4017d6)
+  ┗━┳━━ get_next_line at get_next_line.c:105:9 (0x40171a)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m18[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m32[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ ft_strjoin_gnl at get_next_line_utils.c:50:12 (0x40188d)
+  ┗━┳━━ join_free at get_next_line.c:19:8 (0x40136c)
+    ┗━┳━━ read_loop at get_next_line.c:79:10 (0x40158c)
+      ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+        ┗━┳━━ read_map at map_parser.c:24:9 (0x401b02)
+          ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m3[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ read_loop at get_next_line.c:62:11 (0x4014b8)
+  ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m9[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ read_loop at get_next_line.c:62:11 (0x4014b8)
+  ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m18[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m32[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2704[0m bytes allocated in [33m13[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m96[0m bytes allocated in [33m6[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m252[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m10[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m144[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m7[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m16[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m72[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m32[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m108[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2704[0m bytes allocated in [33m13[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m112[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m288[0m bytes allocated in [33m8[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1040[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1456[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2704[0m bytes allocated in [33m13[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1664[0m bytes allocated in [33m8[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1040[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m144[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4368[0m bytes allocated in [33m21[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m7[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1456[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2704[0m bytes allocated in [33m13[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2080[0m bytes allocated in [33m10[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m7[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m128[0m bytes allocated in [33m8[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m288[0m bytes allocated in [33m8[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m5[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3120[0m bytes allocated in [33m15[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3328[0m bytes allocated in [33m16[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4784[0m bytes allocated in [33m23[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1456[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3952[0m bytes allocated in [33m19[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3952[0m bytes allocated in [33m19[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m176[0m bytes allocated in [33m11[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m396[0m bytes allocated in [33m11[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m7[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2080[0m bytes allocated in [33m10[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m7[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m64[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m144[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m5[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmunmap [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ ?? at ?? (0x42cf)
+  ┗━┳━━ ?? at ?? (0x1537c)
+    ┗━┳━━ ?? at ?? (0x174e7)
+      ┗━┳━━ ?? at ?? (0x4ac8)
+        ┗━┳━━ ?? at ?? (0x45a55)
+          ┗━━━━ ?? at ?? (0x4266)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4368[0m bytes allocated in [33m21[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmmap [0m when this function is failing, allocations are not freed in [33m9[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4368[0m bytes allocated in [33m21[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1040[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m8[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mrecvmsg [0m when this function is failing, allocations are not freed in [33m4[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mpoll [0m when this function is failing, allocations are not freed in [33m6[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mpoll [0m when this function is failing, allocations are not freed in [33m4[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mpoll [0m when this function is failing, allocations are not freed in [33m4[0m contexts 
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mgetenv [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1456[0m bytes allocated in [33m7[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m2704[0m bytes allocated in [33m13[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mmalloc [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mopen [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3328[0m bytes allocated in [33m16[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m832[0m bytes allocated in [33m4[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mgethostname [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4576[0m bytes allocated in [33m22[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mread [0m when this function is failing, allocations are not freed in [33m2[0m contexts 
+┗━┳━━ read_loop at get_next_line.c:75:7 (0x401561)
+  ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m46[0m bytes allocated in [33m6[0m allocations is not freed
+┗━┳━━ ft_strtrim at ?? (0x4034b1)
+  ┗━┳━━ read_map at map_parser.c:30:23 (0x401b5c)
+    ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mmalloc [0m [33m96[0m bytes allocated in [33m6[0m allocations is not freed
+┗━┳━━ read_map at map_parser.c:27:14 (0x401b1b)
+  ┗━━━━ main at so_long.c:27:8 (0x40129f)
+
+┏[42m [1mread [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ read_loop at get_next_line.c:75:7 (0x401561)
+  ┗━┳━━ get_next_line at get_next_line.c:92:9 (0x4015fc)
+    ┗━┳━━ read_map at map_parser.c:40:10 (0x401bdc)
+      ┗━━━━ main at so_long.c:27:8 (0x40129f)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m3328[0m bytes allocated in [33m16[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m624[0m bytes allocated in [33m3[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+┏[42m [1mlseek [0m when this function is failing, allocations are not freed in [33m11[0m contexts 
+┗━┳━━ load_images at game_init.c:42:15 (0x4029e9)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mcalloc [0m [33m88[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m45[0m bytes allocated in [33m5[0m allocations is not freed
+┗━┳━━ ft_strdup at ?? (0x4031f5)
+  ┗━┳━━ store_map at map_parser.c:58:12 (0x401c68)
+    ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+      ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m48[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ store_map at map_parser.c:53:8 (0x401c30)
+  ┗━┳━━ init_win at game_init.c:18:14 (0x402856)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m4992[0m bytes allocated in [33m24[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m416[0m bytes allocated in [33m2[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m208[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m1024[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ load_images at game_init.c:43:20 (0x402a12)
+  ┗━┳━━ init_win at game_init.c:29:2 (0x40294a)
+    ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m936[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:25:14 (0x4028f5)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+┏[43m [1mmalloc [0m [33m136[0m bytes allocated in [33m1[0m allocations is not freed
+┗━┳━━ init_win at game_init.c:22:14 (0x4028a1)
+  ┗━━━━ main at so_long.c:37:3 (0x40133c)
+
+
+[1mFunction tests: [32m75 passed[0m, 75 in total
+[1mTime:[0m           903 ms
+[1mSuccess rate:[0m   100 %
+[0;37mAll tests ran[0m

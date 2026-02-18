@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 12:23:37 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 20:27:35 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	init_win(t_game *game, t_list *map)
 	game->mlx = mlx_init();
 	if (!game->mlx)
 		return (0);
+	load_images(game);
 	game->win = mlx_new_window(game->mlx, game->map_w * 64, game->map_h * 64,
 			"so_long");
 	if (!game->win)
-		return (0);
-	load_images(game);
+		kill_game(game);
 	mlx_loop_hook(game->mlx, update_animation, game);
 	mlx_key_hook(game->win, handle_input, game);
 	mlx_hook(game->win, 17, 0L, handle_x, game);
@@ -34,32 +34,31 @@ int	init_win(t_game *game, t_list *map)
 	return (0);
 }
 
-void	load_images(t_game *game)
+void	load_images(t_game *g)
 {
 	int	w;
 	int	h;
 
-	game->wall = mlx_xpm_file_to_image(game->mlx, "xpms/wall.xpm", &w, &h);
-	game->player[0] = mlx_xpm_file_to_image(game->mlx, "xpms/p_r.xpm", &w, &h);
-	game->player[1] = mlx_xpm_file_to_image(game->mlx, "xpms/p_l.xpm", &w, &h);
-	game->floor = mlx_xpm_file_to_image(game->mlx, "xpms/bg_1.xpm", &w, &h);
-	game->door = mlx_xpm_file_to_image(game->mlx, "xpms/door.xpm", &w, &h);
-	game->coin_frames[0] = mlx_xpm_file_to_image(game->mlx, "xpms/c0.xpm", &w,
-			&h);
-	game->coin_frames[1] = mlx_xpm_file_to_image(game->mlx, "xpms/c1.xpm", &w,
-			&h);
-	game->coin_frames[2] = mlx_xpm_file_to_image(game->mlx, "xpms/c2.xpm", &w,
-			&h);
-	game->coin_frames[3] = mlx_xpm_file_to_image(game->mlx, "xpms/c3.xpm", &w,
-			&h);
-	game->coin_frames[4] = mlx_xpm_file_to_image(game->mlx, "xpms/c2.xpm", &w,
-			&h);
-	game->coin_frames[5] = mlx_xpm_file_to_image(game->mlx, "xpms/c1.xpm", &w,
-			&h);
-	game->curr_frame = 0;
-	game->loop_counter = 0;
-	game->p_dir = 1;
-	game->moves_count = 0;
+	g->wall = mlx_xpm_file_to_image(g->mlx, "xpms/wall.xpm", &w, &h);
+	g->player[0] = mlx_xpm_file_to_image(g->mlx, "xpms/p_r.xpm", &w, &h);
+	g->player[1] = mlx_xpm_file_to_image(g->mlx, "xpms/p_l.xpm", &w, &h);
+	g->floor = mlx_xpm_file_to_image(g->mlx, "xpms/bg_1.xpm", &w, &h);
+	g->door = mlx_xpm_file_to_image(g->mlx, "xpms/door.xpm", &w, &h);
+	g->coin_frames[0] = mlx_xpm_file_to_image(g->mlx, "xpms/c0.xpm", &w, &h);
+	g->coin_frames[1] = mlx_xpm_file_to_image(g->mlx, "xpms/c1.xpm", &w, &h);
+	g->coin_frames[2] = mlx_xpm_file_to_image(g->mlx, "xpms/c2.xpm", &w, &h);
+	g->coin_frames[3] = mlx_xpm_file_to_image(g->mlx, "xpms/c3.xpm", &w, &h);
+	g->coin_frames[4] = mlx_xpm_file_to_image(g->mlx, "xpms/c2.xpm", &w, &h);
+	g->coin_frames[5] = mlx_xpm_file_to_image(g->mlx, "xpms/c1.xpm", &w, &h);
+	g->curr_frame = 0;
+	g->loop_counter = 0;
+	g->p_dir = 1;
+	g->moves_count = 0;
+	if (!check_images(g))
+	{
+		ft_printf("Error\n");
+		kill_game(g);
+	}
 }
 
 void	render_all(t_game *g)
