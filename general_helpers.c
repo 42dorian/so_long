@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:36:39 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 10:02:03 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:36:48 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,12 @@ int	check_input(int fd, int argc, char const *argv)
 		ft_printf("Error\nOne argument required!");
 		return (0);
 	}
-	if (fd <= 0)
-		return (0);
 	if (!ft_strnstr(argv, ".ber", ft_strlen(argv)))
+	{
+		ft_printf("Error\nOnly .ber allowed!");
+		return (0);
+	}
+	if (fd <= 0)
 		return (0);
 	return (1);
 }
