@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/17 21:39:49 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:02:28 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,11 @@ void	render_all(t_game *g)
 		x = 0;
 		y++;
 	}
+}
+
+int	img_to_win(t_game *game, void *img_ptr, int x, int y)
+{
+	return (mlx_put_image_to_window(game->mlx, game->win, img_ptr, x, y));
 }
 
 int	update_animation(t_game *game)

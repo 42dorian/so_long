@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:36:39 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/17 21:41:21 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:02:03 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ void	free_strs(char **strs, int i)
 	free(strs);
 }
 
-int	img_to_win(t_game *game, void *img_ptr, int x, int y)
-{
-	return (mlx_put_image_to_window(game->mlx, game->win, img_ptr, x, y));
-}
-
 int	check_input(int fd, int argc, char const *argv)
 {
 	if (argc != 2)
@@ -53,6 +48,7 @@ int	check_input(int fd, int argc, char const *argv)
 		return (0);
 	return (1);
 }
+
 void	kill_game(t_game *game)
 {
 	destroy_images(game);
@@ -70,8 +66,7 @@ void	kill_game(t_game *game)
 	free_strs(game->map, game->map_h);
 }
 
-
-void destroy_images(t_game *game)
+void	destroy_images(t_game *game)
 {
 	mlx_destroy_image(game->mlx, game->door);
 	game->door = NULL;

@@ -24,9 +24,6 @@ FT_PRINTF_DIR = ft_printf
 LIBFT = ${LIBFT_DIR}/libft.a
 FT_PRINTF = ${FT_PRINTF_DIR}/libftprintf.a
 
-CC = cc
-RM = rm -f
-
 all: ${NAME}
 
 $(LIBFT):
@@ -36,20 +33,20 @@ $(FT_PRINTF):
 		@make -C $(FT_PRINTF_DIR)
 
 %.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
+	cc ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${LIBFT} ${FT_PRINTF} ${OBJECTS}
-	${CC} ${CFLAGS} ${MINIFLAGS} ${OBJECTS} ${LIBFT} ${FT_PRINTF} -o ${NAME}
+	cc ${CFLAGS} ${MINIFLAGS} ${OBJECTS} ${LIBFT} ${FT_PRINTF} -o ${NAME}
 
 clean:
 	make -C ${LIBFT_DIR} clean
 	make -C ${FT_PRINTF_DIR} clean
-	${RM} ${OBJECTS}
+	rm -f ${OBJECTS}
 
 fclean: clean
 	make -C ${LIBFT_DIR} fclean
 	make -C ${FT_PRINTF_DIR} fclean
-	${RM} ${NAME}
+	rm -f ${NAME}
 
 re: fclean all
 
