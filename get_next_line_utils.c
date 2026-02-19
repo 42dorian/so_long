@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:09:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/06 14:47:56 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:49:06 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	i = 0;
 	new_arr = malloc((ft_strlen_int(s1) + ft_strlen_int(s2)) + 1);
 	if (!new_arr)
-		return (s1);
+		return (free_and_null(&s1), NULL);
 	while (s1[i])
 	{
 		new_arr[i] = s1[i];

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 20:31:13 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:13:12 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,18 @@ t_list	*read_map(int fd)
 	t_list	*new_node;
 
 	head = NULL;
-	// tail = NULL;
-	line = get_next_line(fd);
-	while (line != NULL)
+	tail = NULL;
+	while (1)
 	{
+		line = get_next_line(fd);
+		if(!line)
+			break;
 		new_node = malloc(sizeof(t_list));
 		if (!new_node)
-			return (free_all(head), free(line), NULL);
+			return (free_all(head), free(line), get_next_line(-1), NULL);
 		new_node->content = ft_strtrim(line, "\n");
 		if (!new_node->content)
-			return (free_all(head), free(line), NULL);
+			return (get_next_line(-1), free_all(head), free_all(new_node), free(line), NULL);
 		new_node->next = NULL;
 		if (head == NULL)
 			head = new_node;
@@ -37,9 +39,8 @@ t_list	*read_map(int fd)
 			tail->next = new_node;
 		tail = new_node;
 		free(line);
-		line = get_next_line(fd);
 	}
-	return (head);
+	return (NULL);
 }
 
 char	**store_map(t_list *head)
@@ -59,7 +60,7 @@ char	**store_map(t_list *head)
 		if (!map[i])
 		{
 			free_strs(map, --i);
-			return(0);
+			return (0);
 		}
 		head = head->next;
 		i++;

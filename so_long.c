@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 19:43:48 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:41:02 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,18 @@ int	main(int argc, char const *argv[])
 	}
 	return (0);
 }
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+// 	int		fd;
+// 	char *line;
+// 	(void)argc;
+// 	fd = open(argv[1], O_RDONLY);
+// 	line = get_next_line(fd);
+// 	free(line);
+// 	line = NULL;
+// 	get_next_line(-1);
+// 	return 0;
+// }
+

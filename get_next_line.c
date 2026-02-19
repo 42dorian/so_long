@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:09:55 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/01/13 13:47:58 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:22:26 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	*read_loop(int fd, char *file)
 			break ;
 		buffer[r] = '\0';
 		file = join_free(file, buffer);
+		if (!file)
+			return (free_and_null(&buffer), free_and_null(&file));
 	}
 	return (free_and_null(&buffer), file);
 }
@@ -96,15 +98,15 @@ char	*get_next_line(int fd)
 		return (free_and_null(&file));
 	tmp = ft_substr(file, 0, find_new_line(file));
 	if (!tmp)
-		return (free_and_null(&file));
+		return (free_and_null(&file), free_and_null(&tmp));
 	str = ft_substr(file, find_new_line(tmp), ft_strlen_int(file)
 			- ft_strlen_int(tmp));
 	free_and_null(&file);
 	if (!str)
 		return (free_and_null(&tmp));
 	file = ft_strdup_gnl(str);
-	free_and_null(&str);
 	if (!file)
-		return (free_and_null(&file), free_and_null(&tmp));
+		return (free_and_null(&str), free_and_null(&file), free_and_null(&tmp));
+	free_and_null(&str);
 	return (tmp);
 }
