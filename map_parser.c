@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/19 15:13:12 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/20 12:18:04 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_list	*read_map(int fd)
 		tail = new_node;
 		free(line);
 	}
-	return (NULL);
+	return (head);
 }
 
 char	**store_map(t_list *head)
