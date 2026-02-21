@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 18:38:22 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 20:13:23 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/21 13:02:23 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ int	check_images(t_game *game)
 	}
 	return (1);
 }
-

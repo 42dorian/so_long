@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 20:27:35 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/21 13:02:28 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 int	init_win(t_game *game, t_list *map)
 {
 	game->collected_coins = 0;
-	game->map = store_map(map);
 	game->map_h = count_nodes(map);
 	game->map_w = ft_strlen(map->content);
+	game->map = store_map(map);
+	if (!game->map)
+		return (free_all(map), 0);
 	free_all(map);
 	game->mlx = mlx_init();
 	if (!game->mlx)
-		return (0);
+		return (free_strs(game->map, game->map_h), 0);
 	load_images(game);
 	game->win = mlx_new_window(game->mlx, game->map_w * 64, game->map_h * 64,
 			"so_long");
@@ -31,7 +33,7 @@ int	init_win(t_game *game, t_list *map)
 	mlx_key_hook(game->win, handle_input, game);
 	mlx_hook(game->win, 17, 0L, handle_x, game);
 	mlx_loop(game->mlx);
-	return (0);
+	return (1);
 }
 
 void	load_images(t_game *g)

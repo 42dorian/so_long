@@ -6,32 +6,30 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/20 12:18:04 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/21 13:02:33 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-t_list	*read_map(int fd)
+t_list	*read_map(int fd, t_list *head)
 {
 	char	*line;
-	t_list	*head;
 	t_list	*tail;
 	t_list	*new_node;
 
-	head = NULL;
-	tail = NULL;
 	while (1)
 	{
 		line = get_next_line(fd);
-		if(!line)
-			break;
+		if (!line)
+			break ;
 		new_node = malloc(sizeof(t_list));
 		if (!new_node)
 			return (free_all(head), free(line), get_next_line(-1), NULL);
 		new_node->content = ft_strtrim(line, "\n");
 		if (!new_node->content)
-			return (get_next_line(-1), free_all(head), free_all(new_node), free(line), NULL);
+			return (get_next_line(-1), free_all(head), free_all(new_node),
+				free(line), NULL);
 		new_node->next = NULL;
 		if (head == NULL)
 			head = new_node;

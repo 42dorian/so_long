@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/20 12:27:41 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/21 13:02:47 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	main(int argc, char const *argv[])
 	t_game	game;
 	char	**tmp_map;
 
-	ft_bzero(&game, sizeof(t_game));
+	map = NULL;
 	fd = open(argv[1], O_RDONLY);
 	if (!check_input(fd, argc, argv[1]))
 		return (0);
-	map = read_map(fd);
+	map = read_map(fd, map);
 	if (!map)
 		return (0);
 	if (validate_map(map))
@@ -52,6 +52,5 @@ int	main(int argc, char const *argv[])
 // 	free(line);
 // 	line = NULL;
 // 	get_next_line(-1);
-// 	return 0;
+// 	return (0);
 // }
-
