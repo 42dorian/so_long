@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:37:47 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/18 12:21:21 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/24 17:12:48 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	move_player(t_game *game, int x, int y)
 	else if (game->map[next_y][next_x] == 'E'
 		&& game->collected_coins == game->coins_found)
 	{
+		ft_printf("Moves: %i\n", game->moves_count + 1);
 		kill_game(game);
 		exit(0);
 	}
@@ -69,7 +70,6 @@ void	move_player(t_game *game, int x, int y)
 	game->map[next_y][next_x] = 'P';
 	game->player_y = next_y;
 	game->player_x = next_x;
-	render_all(game);
 	game->moves_count++;
 	ft_printf("Moves: %i\n", game->moves_count);
 }

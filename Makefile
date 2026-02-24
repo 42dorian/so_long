@@ -33,7 +33,7 @@ $(LIBFT):
 $(FT_PRINTF):
 		@make -C $(FT_PRINTF_DIR)
 
-%.o: %.c
+%.o: %.c so_long.h get_next_line.h
 	cc ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${LIBFT} ${FT_PRINTF} ${OBJECTS}
