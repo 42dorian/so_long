@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/21 13:02:28 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:23:37 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	init_win(t_game *game, t_list *map)
 	free_all(map);
 	game->mlx = mlx_init();
 	if (!game->mlx)
+	{
 		return (free_strs(game->map, game->map_h), 0);
+	}
 	load_images(game);
 	game->win = mlx_new_window(game->mlx, game->map_w * 64, game->map_h * 64,
 			"so_long");
@@ -58,8 +60,9 @@ void	load_images(t_game *g)
 	g->moves_count = 0;
 	if (!check_images(g))
 	{
-		ft_printf("Error\n");
+		ft_printf("Error\nFailed loading images\n");
 		kill_game(g);
+		exit(0);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/21 13:02:33 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:31:26 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,12 @@ int	playable_map(char **map, t_game *game)
 	while (map[i])
 		free(map[i++]);
 	free(map);
-	return (game->exit_found == 1 && game->coins_found == coins);
+	if (!(game->exit_found == 1 && game->coins_found == coins))
+	{
+		ft_printf("Error:\nNot a playable map\n");
+		return (0);
+	}
+	return (1);
 }
 
 void	fill_map(char **map, int y, int x, t_game *game)

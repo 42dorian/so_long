@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:55:00 by dabdulla          #+#    #+#             */
-/*   Updated: 2025/10/12 19:35:34 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:19:19 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	find_start(char const *s1, char const *set)
 	j = 0;
 	if (!set)
 		return (0);
-	while (set[j])
+	while (set[j] && s1[i])
 	{
 		if (set[j] == s1[i])
 		{
@@ -40,12 +40,14 @@ static int	find_end(char const *s1, char const *set)
 	int	j;
 	int	count;
 
+	if (!set || !s1 || *s1 == '\0')
+		return (0);
 	i = ft_strlen(s1) - 1;
 	j = 0;
 	count = 0;
 	if (!set)
 		return (0);
-	while (set[j])
+	while (set[j] && i >= 0)
 	{
 		if (set[j] == s1[i])
 		{
@@ -62,17 +64,19 @@ static int	find_end(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		size;
+	int		start;
 	char	*str;
 
 	if (!s1)
 		return (NULL);
-	size = ft_strlen(s1) - find_start(s1, set) - find_end(s1, set);
+	start = find_start(s1, set);
+	size = ft_strlen(s1) - start - find_end(s1, set);
 	if (size <= 0)
 		return (ft_strdup(""));
 	str = malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	ft_memcpy(str, s1 + find_start(s1, set), size);
+	ft_memcpy(str, s1 + start, size);
 	str[size] = '\0';
 	return (str);
 }
