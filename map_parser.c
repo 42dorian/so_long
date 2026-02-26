@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:36:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/25 15:31:26 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:06:02 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char	**store_map(t_list *head)
 	char	**map;
 
 	i = 0;
+	if (!head)
+		return (NULL);
 	height = count_nodes(head);
 	map = malloc(sizeof(char *) * (height + 1));
 	if (!map)

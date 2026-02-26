@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:36:39 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/25 15:30:02 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:04:57 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,19 @@ int	check_input(int fd, int argc, char const *argv)
 {
 	if (argc != 2)
 	{
-		ft_printf("Error\nOne argument required!");
+		ft_printf("Error\nOne argument required!\n");
 		return (0);
 	}
 	if (!ft_strnstr(argv, ".ber", ft_strlen(argv)))
 	{
-		ft_printf("Error\nOnly .ber allowed!");
+		ft_printf("Error\nOnly .ber allowed!\n");
 		return (0);
 	}
 	if (fd <= 0)
+	{
+		ft_printf("Error\nInvalid file\n");
 		return (0);
+	}
 	return (1);
 }
 
@@ -87,6 +90,7 @@ void	destroy_images(t_game *game)
 	while (i < 6)
 	{
 		if (game->mlx && game->coin_frames[i])
-			mlx_destroy_image(game->mlx, game->coin_frames[i++]);
+			mlx_destroy_image(game->mlx, game->coin_frames[i]);
+		i++;
 	}
 }

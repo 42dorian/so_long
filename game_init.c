@@ -6,36 +6,47 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:28:03 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/25 15:23:37 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:39:57 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	init_win(t_game *game, t_list *map)
+int	init_win(t_game *g, t_list *map)
 {
-	game->collected_coins = 0;
-	game->map_h = count_nodes(map);
-	game->map_w = ft_strlen(map->content);
-	game->map = store_map(map);
-	if (!game->map)
-		return (free_all(map), 0);
-	free_all(map);
-	game->mlx = mlx_init();
-	if (!game->mlx)
+	g->map_h = count_nodes(map);
+	g->map_w = ft_strlen(map->content);
+	g->map = store_map(map);
+	if (!g->map)
 	{
-		return (free_strs(game->map, game->map_h), 0);
+		ft_printf("Error\nFailed to store map\n");
+		return (free_all(map), 0);
 	}
-	load_images(game);
-	game->win = mlx_new_window(game->mlx, game->map_w * 64, game->map_h * 64,
-			"so_long");
-	if (!game->win)
-		kill_game(game);
+	free_all(map);
+	g->mlx = mlx_init();
+	if (!g->mlx)
+	{
+		ft_printf("Error\nFailed to initialize mlx\n");
+		return (free_strs(g->map, g->map_h), 0);
+	}
+	load_images(g);
+	g->win = mlx_new_window(g->mlx, g->map_w * 64, g->map_h * 64, "so_long");
+	if (!g->win)
+	{
+		ft_printf("Error\nFalied to load window\n");
+		kill_game(g);
+		exit(0);
+	}
+	mlx_loops(g);
+	return (1);
+}
+
+void	mlx_loops(t_game *game)
+{
 	mlx_loop_hook(game->mlx, update_animation, game);
 	mlx_key_hook(game->win, handle_input, game);
 	mlx_hook(game->win, 17, 0L, handle_x, game);
 	mlx_loop(game->mlx);
-	return (1);
 }
 
 void	load_images(t_game *g)
@@ -92,11 +103,6 @@ void	render_all(t_game *g)
 		x = 0;
 		y++;
 	}
-}
-
-int	img_to_win(t_game *game, void *img_ptr, int x, int y)
-{
-	return (mlx_put_image_to_window(game->mlx, game->win, img_ptr, x, y));
 }
 
 int	update_animation(t_game *game)

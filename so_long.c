@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:18:29 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/25 15:31:37 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:09:20 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ int	main(int argc, char const *argv[])
 		return (0);
 	map = read_map(fd, map);
 	if (!map)
-		return (0);
+		return (ft_printf("Error\nFailed to read map!\n"), 0);
 	if (validate_map(map))
 	{
 		tmp_map = store_map(map);
 		if (!tmp_map)
-			return (free_all(map), 0);
+			return (ft_printf("Error\nFailed to store map!\n"), free_all(map),
+				0);
 		if (!playable_map(tmp_map, &game))
 			return (free_all(map), 0);
 		init_win(&game, map);
