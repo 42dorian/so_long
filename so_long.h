@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:15:53 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/26 16:36:20 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/27 11:12:55 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ void				destroy_images(t_game *game);
 int					handle_x(t_game *game);
 int					check_images(t_game *game);
 void				mlx_loops(t_game *game);
+int					check_map_size(t_list *head);
 
 #endif

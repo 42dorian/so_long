@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:10:41 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/21 13:02:36 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/02/27 11:11:56 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	validate_map(t_list *head)
 		ft_printf("Error\nNot surrounded by walls\n");
 		return (free_all(head), 0);
 	}
+	else if (!check_map_size(head))
+		return (free_all(head), 0);
 	return (1);
 }
 
